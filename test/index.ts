@@ -16,8 +16,14 @@ describe("NFT", function () {
   });
 
   describe("Test functions", function () {
-    it("Mint 3 nft", async function () {
-      await nft.mint(owner.address, 1, 3, "0x00");
+    it("Mint nft", async function () {
+      await nft.mint(owner.address, 1, 1, "0x00");
+    });
+
+    it("Mint batch nft", async function () {
+      const arrIds = [1, 2, 3];
+      const arrAmount = [3, 5, 10];
+      await nft.mintBatch(owner.address, arrIds, arrAmount, "0x00");
     });
   });
 });
