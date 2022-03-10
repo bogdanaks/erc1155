@@ -7,6 +7,8 @@ import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 
+import "./tasks/mint.ts";
+
 dotenv.config();
 
 const config: HardhatUserConfig = {
