@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract NFT1155 is ERC1155, Ownable {
-    constructor() ERC1155("") {}
+    constructor() ERC1155("https://gateway.pinata.cloud/ipfs/QmXVrmpaVuViQYiqCTL2KADYrGqHFf1RHGngaQTkoDCsQq/{id}.json") {}
 
     function mint(address _account, uint256 _id, uint256 _amount, bytes memory _data) public onlyOwner {
         _mint(_account, _id, _amount, _data);
